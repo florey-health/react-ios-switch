@@ -5,18 +5,9 @@
   "author": "Matthew King <mking@clari.com>",
   "license": "MIT",
   "repository": "clari/react-ios-switch",
-  "main": "lib",
-  "files": [
-    "build/bundle.js",
-    "build/bundle.css",
-    "lib"
-  ],
-  "keywords": [
-    "react",
-    "react-component",
-    "switch",
-    "toggle"
-  ],
+  "main": "src",
+  "files": ["src"],
+  "keywords": ["react", "react-component", "switch", "toggle"],
   "scripts": {
     "babel": "babel src --out-dir lib --only 'src/index.js,src/normalizeColor.js,src/prefixStyle.js,src/Switch.jsx'",
     "postversion": "git push && git push --tags",

@@ -5,58 +5,53 @@ import Switch from './Switch';
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       isColorSwitchChecked: true,
       isLabelSwitchChecked: true,
       isStyleSwitchChecked: true,
-      isSwitchChecked: true,
+      isSwitchChecked: true
     };
   }
-  
+
   render() {
-    const { isColorSwitchChecked, isLabelSwitchChecked, isStyleSwitchChecked, isSwitchChecked } = this.state;
-    
+    const {
+      isColorSwitchChecked,
+      isLabelSwitchChecked,
+      isStyleSwitchChecked,
+      isSwitchChecked
+    } = this.state;
+
     return (
-      <div
-        style={{ margin: 50 }}
-      >
+      <div style={{ margin: 50 }}>
         <div>
           <Switch
             checked={isSwitchChecked}
             onChange={checked =>
               this.setState({
-                isSwitchChecked: checked,
-              })
-            }
+                isSwitchChecked: checked
+              })}
           />
         </div>
         <label
           style={{
-            display: 'block',
+            display: 'block'
           }}
         >
           <Switch
             checked={isLabelSwitchChecked}
             onChange={checked =>
               this.setState({
-                isLabelSwitchChecked: checked,
-              })
-            }
+                isLabelSwitchChecked: checked
+              })}
           />
           Label
         </label>
         <div>
-          <Switch
-            checked
-            disabled
-          />
+          <Switch checked disabled />
         </div>
         <div>
-          <Switch
-            checked
-            readOnly
-          />
+          <Switch checked readOnly />
         </div>
         <div>
           <Switch
@@ -65,9 +60,8 @@ export default class Example extends React.Component {
             onColor="rgb(255, 149, 0)"
             onChange={checked =>
               this.setState({
-                isColorSwitchChecked: checked,
-              })
-            }
+                isColorSwitchChecked: checked
+              })}
           />
         </div>
         <div>
@@ -75,11 +69,10 @@ export default class Example extends React.Component {
             checked={isStyleSwitchChecked}
             onChange={checked =>
               this.setState({
-                isStyleSwitchChecked: checked,
-              })
-            }
+                isStyleSwitchChecked: checked
+              })}
             style={{
-              marginLeft: 50,
+              marginLeft: 50
             }}
           />
         </div>
